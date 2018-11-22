@@ -53,7 +53,6 @@ class InteractiveRecord
   end
 
   def self.find_by(attribute)
-    # binding.pry
     sql = "SELECT * FROM #{self.table_name} WHERE '#{attribute.to_s}' = '#{attribute.to_s}' LIMIT 1"
     DB[:conn].execute(sql)
   end
